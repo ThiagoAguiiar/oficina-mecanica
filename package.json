@@ -4,7 +4,8 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --watch src --watch ./src/index.js"
+    "start": "nodemon --watch src --watch ./src/index.js",
+    "dev": "node ./src/index.js"
   },
   "author": "",
   "license": "ISC",
