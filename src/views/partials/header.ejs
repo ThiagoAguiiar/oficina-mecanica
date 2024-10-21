@@ -1,0 +1,57 @@
+<header id="header">
+  <div class="quick-access">
+    <div class="quick-access__wrapper">
+      <span>(19) 99172-3702</span>
+      <span>|</span>
+      <a href="/admin">Entrar</a>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-logo"><%- include('./logo.ejs') %></div>
+
+    <ul class="nav-links"></ul>
+
+    <div class="nav-cta">
+      <a href="">Solicite um orçamento</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const navLinks = [
+    {
+      title: "Home",
+      url: "/",
+    },
+    {
+      title: "Serviços",
+      url: "/servicos",
+    },
+    {
+      title: "Sobre",
+      url: "/sobre",
+    },
+    {
+      title: "Contato",
+      url: "/contato",
+    },
+  ];
+
+  const links = document.querySelector(".nav-links");
+
+  const createNavLink = () => {
+    navLinks.forEach((link) => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+
+      a.href = link.url;
+      a.textContent = link.title;
+
+      li.appendChild(a);
+      links.appendChild(li);
+    });
+  };
+
+  createNavLink();
+</script>
